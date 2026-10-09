@@ -70,9 +70,9 @@ for contour in contours:
         if point_counter % UPDATE_EVERY == 0:
             screen.update()
 
-    pen.goto(x0, y0)  # close the shape
+    pen.goto(x0, y0) 
     pen.end_fill()
-    screen.update()  # make sure this contour's fill shows before moving on
+    screen.update()  
 
 screen.tracer(0)
 pen.speed(0)
