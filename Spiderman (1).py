@@ -1,10 +1,10 @@
 import cv2
 import turtle
 
-IMAGE = "spiderman.png"
+IMAGE = "sp.png"
 img = cv2.imread(IMAGE)
 
-if img is None:
+if img is None: 
     print("Image not found!")
     exit()
 
@@ -12,7 +12,7 @@ height = 700
 ratio = height / img.shape[0]
 width = int(img.shape[1] * ratio)
 img = cv2.resize(img, (width, height))
-gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY) 
 
 _, thresh = cv2.threshold(gray, 180, 255, cv2.THRESH_BINARY_INV)
 contours, _ = cv2.findContours(
